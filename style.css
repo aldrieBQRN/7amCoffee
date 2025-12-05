@@ -1,0 +1,1283 @@
+/* style.css - Coffee Theme POS System */
+
+/* ====================== ROOT VARIABLES ====================== */
+:root {
+    /* Coffee Theme Colors */
+    --coffee-primary: #6f4e37;
+    --coffee-secondary: #d4a574;
+    --coffee-light: #f5e9dc;
+    --coffee-dark: #3e2723;
+    --coffee-accent: #c19a6b;
+    --coffee-cream: #f8f4f0;
+    --coffee-mocha: #8b7355;
+    
+    /* Status Colors */
+    --success: #28a745;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --info: #17a2b8;
+    
+    /* Shadows */
+    --shadow-light: 0 4px 12px rgba(111, 78, 55, 0.1);
+    --shadow-medium: 0 6px 20px rgba(111, 78, 55, 0.15);
+    --shadow-heavy: 0 10px 30px rgba(111, 78, 55, 0.2);
+    
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+}
+
+/* ====================== RESET & BASE STYLES ====================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--coffee-cream);
+    color: var(--coffee-dark);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* ====================== TYPOGRAPHY ====================== */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    color: var(--coffee-dark);
+}
+
+.cursive-font {
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+}
+
+.text-coffee {
+    color: var(--coffee-primary) !important;
+}
+
+.text-coffee-light {
+    color: var(--coffee-secondary) !important;
+}
+
+.text-coffee-dark {
+    color: var(--coffee-dark) !important;
+}
+
+/* ====================== BACKGROUNDS ====================== */
+.bg-coffee {
+    background-color: var(--coffee-primary) !important;
+}
+
+.bg-coffee-light {
+    background-color: var(--coffee-light) !important;
+}
+
+.bg-coffee-cream {
+    background-color: var(--coffee-cream) !important;
+}
+
+.bg-coffee-gradient {
+    background: linear-gradient(135deg, var(--coffee-primary) 0%, var(--coffee-dark) 100%) !important;
+}
+
+.bg-coffee-light-gradient {
+    background: linear-gradient(135deg, var(--coffee-light) 0%, #ffffff 100%) !important;
+}
+
+/* ====================== BORDERS ====================== */
+.border-coffee {
+    border-color: var(--coffee-primary) !important;
+}
+
+.border-coffee-light {
+    border-color: var(--coffee-light) !important;
+}
+
+.border-coffee-secondary {
+    border-color: var(--coffee-secondary) !important;
+}
+
+/* ====================== BUTTONS ====================== */
+.btn-coffee {
+    background-color: var(--coffee-primary);
+    border-color: var(--coffee-primary);
+    color: white;
+    font-weight: 600;
+    transition: all var(--transition-fast);
+}
+
+.btn-coffee:hover,
+.btn-coffee:focus,
+.btn-coffee:active {
+    background-color: var(--coffee-dark);
+    border-color: var(--coffee-dark);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
+}
+
+.btn-coffee:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.btn-outline-coffee {
+    background-color: transparent;
+    border-color: var(--coffee-primary);
+    color: var(--coffee-primary);
+    font-weight: 600;
+    transition: all var(--transition-fast);
+}
+
+.btn-outline-coffee:hover,
+.btn-outline-coffee:focus,
+.btn-outline-coffee:active {
+    background-color: var(--coffee-primary);
+    border-color: var(--coffee-primary);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
+}
+
+.btn-coffee-lg {
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+}
+
+.btn-coffee-sm {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+}
+
+/* ====================== BADGES ====================== */
+.badge-coffee {
+    background-color: var(--coffee-primary);
+    color: white;
+}
+
+.badge-coffee-light {
+    background-color: var(--coffee-secondary);
+    color: var(--coffee-dark);
+}
+
+/* ====================== CARDS ====================== */
+.card-coffee {
+    background: white;
+    border: 1px solid var(--coffee-light);
+    border-radius: 12px;
+    box-shadow: var(--shadow-light);
+    transition: all var(--transition-normal);
+}
+
+.card-coffee:hover {
+    box-shadow: var(--shadow-medium);
+    transform: translateY(-3px);
+}
+
+.card-coffee-header {
+    background: linear-gradient(135deg, var(--coffee-primary) 0%, var(--coffee-mocha) 100%);
+    color: white;
+    border-radius: 12px 12px 0 0 !important;
+    padding: 1rem 1.5rem;
+}
+
+.card-coffee-body {
+    padding: 1.5rem;
+}
+
+/* ====================== STAT CARDS ====================== */
+.stat-card {
+    background: linear-gradient(135deg, #ffffff 0%, var(--coffee-light) 100%);
+    border: none;
+    border-radius: 15px;
+    border-left: 5px solid var(--coffee-secondary);
+    transition: all var(--transition-normal);
+    padding: 1.5rem;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+}
+
+.stat-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--coffee-light);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: var(--coffee-primary);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--coffee-secondary), var(--coffee-accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+}
+
+/* ====================== PRODUCT CARDS ====================== */
+.product-card-coffee {
+    background: white;
+    border: 1px solid var(--coffee-light);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all var(--transition-normal);
+    height: 100%;
+}
+
+.product-card-coffee:hover:not(.disabled) {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+    border-color: var(--coffee-secondary);
+}
+
+.product-card-coffee.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.product-icon-coffee {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, var(--coffee-light) 0%, #ffffff 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+    border: 2px solid var(--coffee-secondary);
+    flex-shrink: 0;
+}
+
+.product-info-coffee {
+    flex: 1;
+    min-width: 0;
+}
+
+/* ====================== TABLES ====================== */
+.table-coffee {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow-light);
+}
+
+.table-coffee thead {
+    background: linear-gradient(135deg, var(--coffee-primary) 0%, var(--coffee-mocha) 100%);
+    color: white;
+}
+
+.table-coffee th {
+    border: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem; /* Slightly larger text */
+    letter-spacing: 0.5px;
+    padding: 1.25rem 1rem !important; /* Increased Padding */
+}
+
+.table-coffee td {
+    border-color: var(--coffee-light);
+    vertical-align: middle;
+    padding: 1.25rem 1rem !important; /* Increased Padding for spacing */
+    font-size: 1.05rem; /* Slightly larger text for readability */
+}
+
+.table-coffee tbody tr:hover {
+    background-color: var(--coffee-light) !important;
+}
+
+/* ====================== FORMS ====================== */
+.form-control-coffee {
+    border: 2px solid var(--coffee-light);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    transition: all var(--transition-fast);
+    background: white;
+}
+
+.form-control-coffee:focus {
+    border-color: var(--coffee-secondary);
+    box-shadow: 0 0 0 0.25rem rgba(212, 165, 116, 0.25);
+    outline: none;
+}
+
+.form-label-coffee {
+    color: var(--coffee-dark);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.input-group-coffee .input-group-text {
+    background-color: var(--coffee-primary);
+    border-color: var(--coffee-primary);
+    color: white;
+    font-weight: 600;
+}
+
+/* ====================== ALERTS & NOTIFICATIONS ====================== */
+.alert-coffee {
+    border-radius: 10px;
+    border: none;
+    padding: 1rem 1.5rem;
+    box-shadow: var(--shadow-light);
+}
+
+.alert-coffee-success {
+    background-color: #f0f9f0;
+    border-left: 4px solid var(--success);
+    color: #155724;
+}
+
+.alert-coffee-warning {
+    background-color: #fff9e6;
+    border-left: 4px solid var(--warning);
+    color: #856404;
+}
+
+.alert-coffee-danger {
+    background-color: #fdf0f0;
+    border-left: 4px solid var(--danger);
+    color: #721c24;
+}
+
+.alert-coffee-info {
+    background-color: #f0f9ff;
+    border-left: 4px solid var(--info);
+    color: #0c5460;
+}
+
+/* ====================== MODALS ====================== */
+.modal-coffee .modal-content {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow-heavy);
+}
+
+.modal-coffee .modal-header {
+    background: linear-gradient(135deg, var(--coffee-primary) 0%, var(--coffee-dark) 100%);
+    color: white;
+    border: none;
+    padding: 1.5rem;
+}
+
+.modal-coffee .modal-title {
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.modal-coffee .modal-body {
+    padding: 1.5rem;
+    background-color: var(--coffee-cream);
+}
+
+.modal-coffee .modal-footer {
+    background-color: white;
+    border-top: 1px solid var(--coffee-light);
+    padding: 1rem 1.5rem;
+}
+
+/* ====================== SIDEBAR ====================== */
+.sidebar-coffee {
+    background: linear-gradient(180deg, var(--coffee-dark) 0%, var(--coffee-primary) 100%);
+    box-shadow: var(--shadow-medium);
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: transform var(--transition-normal);
+}
+
+.sidebar-brand {
+    padding: 2rem 1.5rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.brand-icon {
+    width: 70px;
+    height: 70px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    font-size: 2rem;
+    color: var(--coffee-primary);
+}
+
+.sidebar-menu {
+    padding: 1.5rem 0;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: all var(--transition-fast);
+    border-left: 4px solid transparent;
+    cursor: pointer;
+}
+
+.menu-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-left-color: var(--coffee-secondary);
+}
+
+.menu-item.active {
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    border-left-color: var(--coffee-secondary);
+}
+
+.menu-icon {
+    width: 24px;
+    text-align: center;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+}
+
+/* ====================== NAVBAR ====================== */
+.navbar-coffee {
+    background: linear-gradient(135deg, var(--coffee-primary) 0%, var(--coffee-dark) 100%);
+    box-shadow: var(--shadow-medium);
+    padding: 1rem 0;
+}
+
+.navbar-brand-coffee {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand-icon {
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.75rem;
+    color: var(--coffee-primary);
+}
+
+/* ====================== LOGIN SCREEN ====================== */
+#login-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    overflow: hidden;
+}
+
+.login-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--coffee-dark) 0%, var(--coffee-primary) 100%);
+}
+
+.login-container {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.login-card {
+    background: white;
+    border-radius: 20px;
+    box-shadow: var(--shadow-heavy);
+    max-width: 450px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.login-header {
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, var(--coffee-primary) 0%, var(--coffee-mocha) 100%);
+    color: white;
+}
+
+.login-logo {
+    width: 100px;
+    height: 100px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    font-size: 3rem;
+    color: var(--coffee-primary);
+}
+
+.login-body {
+    padding: 2rem;
+}
+
+/* ====================== ANIMATIONS ====================== */
+@keyframes bean-float {
+    0%, 100% { 
+        transform: translateY(0) rotate(0deg); 
+    }
+    50% { 
+        transform: translateY(-30px) rotate(15deg); 
+    }
+}
+
+@keyframes fade-in {
+    from { 
+        opacity: 0; 
+        transform: translateY(20px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+@keyframes slide-in {
+    from { 
+        transform: translateX(-100%); 
+    }
+    to { 
+        transform: translateX(0); 
+    }
+}
+
+@keyframes pulse {
+    0%, 100% { 
+        opacity: 1; 
+    }
+    50% { 
+        opacity: 0.7; 
+    }
+}
+
+/* Animation Classes */
+.fade-in {
+    animation: fade-in 0.5s ease;
+}
+
+.slide-in {
+    animation: slide-in 0.3s ease;
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+/* Coffee Bean Animation */
+.coffee-bean {
+    position: absolute;
+    animation: bean-float 20s infinite ease-in-out;
+    opacity: 0.3;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* ====================== SCROLLBAR ====================== */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--coffee-light);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--coffee-primary);
+    border-radius: 4px;
+    transition: background var(--transition-fast);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--coffee-dark);
+}
+
+/* ====================== UTILITY CLASSES ====================== */
+.clickable {
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.clickable:hover {
+    opacity: 0.8;
+}
+
+.shadow-coffee {
+    box-shadow: var(--shadow-light);
+}
+
+.shadow-coffee-medium {
+    box-shadow: var(--shadow-medium);
+}
+
+.shadow-coffee-heavy {
+    box-shadow: var(--shadow-heavy);
+}
+
+.rounded-coffee {
+    border-radius: 12px;
+}
+
+.rounded-coffee-lg {
+    border-radius: 20px;
+}
+
+.border-coffee-top {
+    border-top: 2px solid var(--coffee-light);
+}
+
+.border-coffee-bottom {
+    border-bottom: 2px solid var(--coffee-light);
+}
+
+/* ====================== POS SPECIFIC STYLES ====================== */
+.pos-container {
+    background: var(--coffee-cream);
+    min-height: calc(100vh - 73px);
+}
+
+.pos-section-title {
+    color: var(--coffee-dark);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid var(--coffee-secondary);
+}
+
+.filter-buttons-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.filter-btn {
+    flex: 0 0 auto;
+    white-space: nowrap;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+}
+
+.cart-container {
+    background: white;
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow-light);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-items {
+    flex: 1;
+    overflow-y: auto;
+    max-height: 400px;
+    margin-bottom: 1.5rem;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem;
+    background: var(--coffee-cream);
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    border: 1px solid var(--coffee-light);
+}
+
+.cart-item-info {
+    flex: 1;
+    margin-right: 1rem;
+}
+
+.cart-item-name {
+    font-weight: 600;
+    color: var(--coffee-dark);
+    margin-bottom: 0.25rem;
+}
+
+.cart-item-price {
+    color: var(--coffee-mocha);
+    font-size: 0.875rem;
+}
+
+.cart-item-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.quantity-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: var(--coffee-primary);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.quantity-btn:hover {
+    background: var(--coffee-dark);
+    transform: scale(1.1);
+}
+
+.quantity-display {
+    min-width: 40px;
+    text-align: center;
+    font-weight: 600;
+    color: var(--coffee-dark);
+}
+
+.cart-total {
+    border-top: 2px solid var(--coffee-secondary);
+    padding-top: 1rem;
+    margin-top: 1rem;
+}
+
+.total-amount {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--coffee-primary);
+    text-align: right;
+}
+
+/* ====================== RECEIPT STYLES ====================== */
+.receipt-coffee {
+    background: linear-gradient(135deg, #ffffff 0%, var(--coffee-light) 100%);
+    border: 2px solid var(--coffee-secondary);
+    border-radius: 15px;
+    padding: 2rem;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.receipt-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px dashed var(--coffee-secondary);
+}
+
+.receipt-logo {
+    width: 60px;
+    height: 60px;
+    background: var(--coffee-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.receipt-items {
+    margin: 1.5rem 0;
+}
+
+.receipt-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px dashed var(--coffee-light);
+}
+
+.receipt-totals {
+    border-top: 2px dashed var(--coffee-secondary);
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.receipt-total-line {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.receipt-total-line.grand-total {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--coffee-primary);
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--coffee-secondary);
+}
+
+.receipt-footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 2px dashed var(--coffee-secondary);
+    color: var(--coffee-mocha);
+    font-size: 0.875rem;
+}
+
+/* ====================== LOADING STATES ====================== */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.loading-spinner {
+    width: 60px;
+    height: 60px;
+    border: 4px solid var(--coffee-light);
+    border-top: 4px solid var(--coffee-primary);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* ====================== ACCESSIBILITY ====================== */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.focus-visible:focus {
+    outline: 2px solid var(--coffee-secondary);
+    outline-offset: 2px;
+}
+
+/* ====================== CUSTOM SCROLLBAR FOR CARDS ====================== */
+.scrollable-card {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.scrollable-card::-webkit-scrollbar {
+    width: 6px;
+}
+
+.scrollable-card::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.scrollable-card::-webkit-scrollbar-thumb {
+    background: var(--coffee-light);
+    border-radius: 3px;
+}
+
+/* ====================== HOVER EFFECTS ====================== */
+.hover-lift {
+    transition: transform var(--transition-normal);
+}
+
+.hover-lift:hover {
+    transform: translateY(-5px);
+}
+
+.hover-grow {
+    transition: transform var(--transition-normal);
+}
+
+.hover-grow:hover {
+    transform: scale(1.05);
+}
+
+.hover-shadow {
+    transition: box-shadow var(--transition-normal);
+}
+
+.hover-shadow:hover {
+    box-shadow: var(--shadow-medium);
+}
+
+/* ====================== STATUS INDICATORS ====================== */
+.status-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.status-indicator.success {
+    background-color: rgba(40, 167, 69, 0.1);
+    color: var(--success);
+}
+
+.status-indicator.warning {
+    background-color: rgba(255, 193, 7, 0.1);
+    color: var(--warning);
+}
+
+.status-indicator.danger {
+    background-color: rgba(220, 53, 69, 0.1);
+    color: var(--danger);
+}
+
+.status-indicator.info {
+    background-color: rgba(23, 162, 184, 0.1);
+    color: var(--info);
+}
+
+/* ====================== CUSTOM SELECT ====================== */
+.custom-select-coffee {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%236f4e37' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 16px 12px;
+    padding-right: 2.5rem;
+}
+
+/* ====================== EMPTY STATES ====================== */
+.empty-state {
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+.empty-state-icon {
+    font-size: 3rem;
+    color: var(--coffee-light);
+    margin-bottom: 1rem;
+}
+
+.empty-state-title {
+    color: var(--coffee-mocha);
+    margin-bottom: 0.5rem;
+}
+
+.empty-state-message {
+    color: var(--coffee-secondary);
+    margin-bottom: 1.5rem;
+}
+
+/* ====================== GRADIENTS ====================== */
+.gradient-coffee {
+    background: linear-gradient(135deg, var(--coffee-primary), var(--coffee-dark));
+}
+
+.gradient-coffee-light {
+    background: linear-gradient(135deg, var(--coffee-secondary), var(--coffee-accent));
+}
+
+.gradient-text-coffee {
+    background: linear-gradient(135deg, var(--coffee-secondary), var(--coffee-accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ====================== SEPARATORS ====================== */
+.separator-coffee {
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--coffee-secondary), transparent);
+    margin: 2rem 0;
+    border: none;
+}
+
+.separator-dashed {
+    height: 1px;
+    background: repeating-linear-gradient(to right, var(--coffee-light), var(--coffee-light) 5px, transparent 5px, transparent 10px);
+    margin: 1.5rem 0;
+    border: none;
+}
+
+/* ====================== LAYOUT FIXES ====================== */
+/* Force margin for Screens when Owner sidebar is present */
+.owner-screen-layout {
+    margin-left: 260px !important; /* Matches sidebar width */
+    width: auto !important;
+    transition: margin-left 0.3s ease;
+    padding: 20px; /* Add padding for better spacing */
+}
+
+/* On mobile/tablet, remove the margin since sidebar is hidden */
+@media (max-width: 992px) {
+    .owner-screen-layout {
+        margin-left: 0 !important;
+    }
+}
+
+/* ====================== FINAL LAYOUT & TABLE FIXES ====================== */
+
+/* 1. LAYOUT SAFETY NET: 
+   Force all Admin screens to fit inside the content area correctly, 
+   ignoring any accidental margins added by JS. 
+   Applied to: Inventory, Dashboard, Sales Report
+*/
+#inventory-screen, 
+#dashboard-screen, 
+#sales-screen {
+    margin-left: 0 !important;
+    width: 100% !important;
+    padding: 0 !important;
+}
+
+/* 2. TABLE EXPANSION:
+   Force tables to take up 100% of the card width 
+   and distribute columns nicely to remove empty space.
+*/
+.table-responsive {
+    overflow-x: hidden; /* Hide scrollbar if not needed */
+    width: 100% !important;
+}
+
+/* Generic Table Fix for all Admin tables */
+#inventory-screen .table,
+#dashboard-screen .table,
+#sales-screen .table {
+    width: 100% !important;
+    table-layout: fixed !important; /* Forces columns to respect width percentages */
+    margin-bottom: 0;
+}
+
+/* --- INVENTORY SPECIFIC COLUMN WIDTHS --- */
+#inventory-screen th:nth-child(1) { width: 35%; } /* Item Name */
+#inventory-screen th:nth-child(2) { width: 15%; } /* Category */
+#inventory-screen th:nth-child(3) { width: 15%; } /* Price */
+#inventory-screen th:nth-child(4) { width: 15%; } /* Stock */
+#inventory-screen th:nth-child(5) { width: 20%; } /* Actions */
+#inventory-screen td:nth-child(5), 
+#inventory-screen th:nth-child(5) { text-align: center; }
+
+/* --- DASHBOARD & SALES REPORT COLUMN WIDTHS --- */
+/* Both share the same structure: Date | Items | Payment | Total */
+#dashboard-screen th:nth-child(1), #sales-screen th:nth-child(1) { width: 20%; } /* Date & Time */
+#dashboard-screen th:nth-child(2), #sales-screen th:nth-child(2) { width: 40%; } /* Items - Widest */
+#dashboard-screen th:nth-child(3), #sales-screen th:nth-child(3) { width: 20%; } /* Payment */
+#dashboard-screen th:nth-child(4), #sales-screen th:nth-child(4) { width: 20%; } /* Total */
+
+/* Right align the total column */
+#dashboard-screen td:nth-child(4), #dashboard-screen th:nth-child(4),
+#sales-screen td:nth-child(4), #sales-screen th:nth-child(4) {
+    text-align: right;
+}
+
+/* ====================== POS SPACING FIX ====================== */
+/* 1. Remove padding from the inner container to prevent double spacing */
+#pos-screen .container-fluid {
+    padding-top: 0.5rem !important; /* Reduced from py-3 (1rem) */
+}
+
+/* 2. Reduce top padding specifically when in Owner mode (Sidebar present) */
+#pos-screen.owner-screen-layout {
+    padding-top: 10px !important; /* Reduced from default 20px */
+}
+
+/* Hide mobile menu toggle on Desktop by default */
+.mobile-menu-toggle {
+    display: none;
+}
+
+/* ====================== RESPONSIVE DESIGN ====================== */
+@media (max-width: 1200px) {
+    .products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 992px) {
+    .sidebar-coffee {
+        transform: translateX(-100%);
+        width: 280px;
+    }
+    
+    .sidebar-coffee.show {
+        transform: translateX(0);
+    }
+    
+    .content-area {
+        margin-left: 0 !important;
+    }
+    
+    .mobile-menu-toggle {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: var(--coffee-primary);
+        color: white;
+        border: none;
+        box-shadow: var(--shadow-medium);
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+    }
+    
+    .products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .stat-number {
+        font-size: 2rem;
+    }
+    
+    .stat-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+    
+    .product-icon-coffee {
+        width: 60px;
+        height: 60px;
+        font-size: 1.8rem;
+    }
+    
+    .filter-buttons-container {
+        overflow-x: auto;
+        padding-bottom: 0.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .filter-btn {
+        font-size: 0.875rem;
+        padding: 0.5rem 0.75rem;
+    }
+    
+    .pos-section-title {
+        font-size: 1.25rem;
+    }
+    
+    .cart-container {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .login-card {
+        margin: 1rem;
+    }
+    
+    .login-header {
+        padding: 1.5rem;
+    }
+    
+    .login-body {
+        padding: 1.5rem;
+    }
+    
+    .login-logo {
+        width: 80px;
+        height: 80px;
+        font-size: 2.5rem;
+    }
+    
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cart-item {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.75rem;
+    }
+    
+    .cart-item-info {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+    
+    .cart-item-controls {
+        justify-content: space-between;
+    }
+    
+    .modal-coffee .modal-dialog {
+        margin: 0.5rem;
+    }
+}
+
+/* ====================== PRINT STYLES ====================== */
+@media print {
+    body * {
+        visibility: hidden !important;
+    }
+    
+    .receipt-coffee,
+    .receipt-coffee * {
+        visibility: visible !important;
+    }
+    
+    .receipt-coffee {
+        position: absolute !important;
+        left: 0 !important;
+        top: 0 !important;
+        width: 80mm !important;
+        box-shadow: none !important;
+        border: 1px solid #000 !important;
+        padding: 1rem !important;
+        background: white !important;
+    }
+    
+    .btn,
+    .modal-footer,
+    .no-print {
+        display: none !important;
+    }
+}
